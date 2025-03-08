@@ -5,9 +5,11 @@ import Header from "./components/Header";
 import Courses from "./components/Courses";
 import { useInView } from './hooks/useInView';
 
+type DivElement = HTMLDivElement;
+
 export default function Home() {
-  const [heroRef, isHeroInView] = useInView();
-  const [featuresRef, isFeaturesInView] = useInView();
+  const [heroRef, isHeroInView] = useInView<DivElement>();
+  const [featuresRef, isFeaturesInView] = useInView<DivElement>();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -17,7 +19,7 @@ export default function Home() {
         <section className="bg-gradient-to-br from-purple-700 to-indigo-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div 
-              ref={heroRef as any}
+              ref={heroRef}
               className={`text-center transition-all duration-1000 ease-out transform
                 ${isHeroInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
             >
@@ -44,8 +46,8 @@ export default function Home() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div 
-              ref={featuresRef as any}
-              className={`transition-all duration-700 ease-out`}
+              ref={featuresRef}
+              className="transition-all duration-700 ease-out"
             >
               <div className={`text-center mb-12 transition-all duration-700 ease-out transform
                 ${isFeaturesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}

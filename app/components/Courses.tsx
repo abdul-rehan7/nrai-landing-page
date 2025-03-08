@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { useInView } from '../hooks/useInView';
 
 interface Course {
@@ -10,6 +9,8 @@ interface Course {
   level: string;
   image: string;
 }
+
+type DivElement = HTMLDivElement;
 
 const courses: Course[] = [
   {
@@ -63,11 +64,11 @@ const courses: Course[] = [
 ];
 
 const CourseCard = ({ course, index }: { course: Course; index: number }) => {
-  const [ref, isInView] = useInView();
+  const [ref, isInView] = useInView<DivElement>();
 
   return (
     <div
-      ref={ref as any}
+      ref={ref}
       className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-out transform
         ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       style={{ transitionDelay: `${index * 200}ms` }}
@@ -94,13 +95,13 @@ const CourseCard = ({ course, index }: { course: Course; index: number }) => {
 };
 
 const Courses = () => {
-  const [headerRef, isHeaderInView] = useInView();
+  const [headerRef, isHeaderInView] = useInView<DivElement>();
 
   return (
     <section id="courses" className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          ref={headerRef as any}
+          ref={headerRef}
           className={`text-center mb-12 transition-all duration-700 ease-out transform
             ${isHeaderInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
