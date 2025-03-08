@@ -42,7 +42,7 @@ export default function Home() {
                 Experience world-class education with state-of-the-art facilities and expert instructors
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 text-gray-800 gap-8">
               <div className="text-center p-6">
                 <div className="text-4xl mb-4">🎓</div>
                 <h3 className="text-xl font-bold mb-2">Expert Faculty</h3>
