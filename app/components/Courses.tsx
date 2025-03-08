@@ -1,4 +1,6 @@
-// import Image from 'next/image';
+'use client';
+import Image from 'next/image';
+import { useInView } from '../hooks/useInView';
 
 interface Course {
   id: number;
@@ -60,22 +62,29 @@ const courses: Course[] = [
   }
 ];
 
-const CourseCard = ({ course }: { course: Course }) => {
+const CourseCard = ({ course, index }: { course: Course; index: number }) => {
+  const [ref, isInView] = useInView();
+
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
-      <div className="h-48 relative bg-gray-200">
-        <div className="w-full h-full flex items-center justify-center bg-blue-100">
-          <span className="text-4xl text-blue-500">🤖</span>
+    <div
+      ref={ref as any}
+      className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-out transform
+        ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      style={{ transitionDelay: `${index * 200}ms` }}
+    >
+      <div className="h-48 relative bg-gradient-to-br from-purple-100 to-indigo-50">
+        <div className="w-full h-full flex items-center justify-center">
+          <span className="text-5xl text-purple-500">🤖</span>
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{course.title}</h3>
-        <p className="text-gray-600 mb-4">{course.description}</p>
+        <h3 className="text-xl font-bold text-indigo-900 mb-2">{course.title}</h3>
+        <p className="text-indigo-600 mb-4">{course.description}</p>
         <div className="flex justify-between items-center text-sm">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+          <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">
             {course.duration}
           </span>
-          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full">
+          <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">
             {course.level}
           </span>
         </div>
@@ -85,21 +94,31 @@ const CourseCard = ({ course }: { course: Course }) => {
 };
 
 const Courses = () => {
+  const [headerRef, isHeaderInView] = useInView();
+
   return (
-    <section id="courses" className="py-16 bg-gray-50">
+    <section id="courses" className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+        <div 
+          ref={headerRef as any}
+          className={`text-center mb-12 transition-all duration-700 ease-out transform
+            ${isHeaderInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <h2 className="text-3xl font-bold text-indigo-900 sm:text-4xl mb-4">
             Our Courses
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-indigo-700 max-w-2xl mx-auto">
             Discover our comprehensive range of courses in Robotics and Artificial Intelligence, 
             designed to equip you with cutting-edge skills and knowledge.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+          {courses.map((course, index) => (
+            <CourseCard 
+              key={course.id} 
+              course={course}
+              index={index}
+            />
           ))}
         </div>
       </div>

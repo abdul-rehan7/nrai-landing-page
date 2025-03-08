@@ -15,7 +15,9 @@
 }
 
 body {
-  color: var(--foreground);
+  /* scroll-behavior:smooth; */
+  scrollbar-width:thin;
+  scrollbar-color: #4CAF50 #f1f1f1;
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
