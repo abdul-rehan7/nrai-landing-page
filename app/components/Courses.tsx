@@ -73,7 +73,7 @@ const CourseCard = ({ course, index }: { course: Course; index: number }) => {
         ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
-      <div className="h-48 relative bg-gradient-to-br from-purple-100 to-indigo-50">
+      <div className="h-48 relative bg-gradient-to-br from-purple-100 to-indigo-100">
         <div className="w-full h-full flex items-center justify-center">
           <span className="text-5xl text-purple-500">🤖</span>
         </div>

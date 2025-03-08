@@ -27,7 +27,7 @@ body {
     text-wrap: balance;
   }
 }
-
+/* ------------------------------------ CUSTOM SCROLLBAR ----------------------------------  */
 ::-webkit-scrollbar{
   width: 12px;
 }

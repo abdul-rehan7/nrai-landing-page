@@ -10,6 +10,29 @@ type DivElement = HTMLDivElement;
 export default function Home() {
   const [heroRef, isHeroInView] = useInView<DivElement>();
   const [featuresRef, isFeaturesInView] = useInView<DivElement>();
+  const [sponsorsRef, isSponsorsInView] = useInView<DivElement>();
+
+  const sponsors = [
+    {
+      logo: "/above_eng.png",
+      description: "Supporting AI research and development"
+    },
+    {
+
+      logo: "/cohort.png",
+      description: "Quantum computing partner"
+    },
+    {
+
+      logo: "/am_logo.png",
+      description: "AI & Deep Learning infrastructure"
+    },
+    {
+
+      logo: "/syber.png",
+      description: "Robotics hardware partner"
+    }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -41,6 +64,41 @@ export default function Home() {
 
         {/* Courses Section */}
         <Courses />
+
+        {/* Sponsors Section */}
+        <section className="py-16 bg-gradient-to-br from-indigo-50 to-purple-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div 
+              ref={sponsorsRef}
+              className="text-center"
+            >
+              <div className={`mb-12 transition-all duration-700 ease-out transform
+                ${isSponsorsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                <h2 className="text-3xl font-bold text-indigo-900 sm:text-4xl mb-4">
+                  Our Trusted Partners
+                </h2>
+                <p className="text-lg text-indigo-700 max-w-2xl mx-auto">
+                  Collaborating with industry leaders to provide cutting-edge education and research opportunities
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                {sponsors.map((sponsor, index) => (
+                  <div
+                    key={sponsor.name}
+                    className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-500 ease-out transform
+                      ${isSponsorsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <div className="text-4xl h-[10rem] md:h-[9rem] flex items-center justify-center mb-3"><img src={sponsor.logo} alt="" /></div>
+                    {/* <h3 className="text-xl font-semibold text-indigo-900 mb-2">{sponsor.name}</h3> */}
+                    {/* <p className="text-sm text-indigo-600">{sponsor.description}</p> */}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Why Choose Us Section */}
         <section className="py-16 bg-gray-50">
