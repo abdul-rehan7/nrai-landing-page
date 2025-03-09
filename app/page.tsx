@@ -85,7 +85,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 {sponsors.map((sponsor, index) => (
                   <div
-                    key={sponsor.name}
+                    key={sponsor.logo}
                     className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-500 ease-out transform
                       ${isSponsorsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
