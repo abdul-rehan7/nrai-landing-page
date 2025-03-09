@@ -12,16 +12,16 @@ const Header = () => {
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-indigo-600 hover:text-purple-700 font-medium">
+            <Link href="/" className="text-[#222C56] hover:text-purple-700 font-medium">
               Home
             </Link>
-            <Link href="#courses" className="text-indigo-600 hover:text-purple-700 font-medium">
+            <Link href="#courses" className="text-[#222C56] hover:text-purple-700 font-medium">
               Courses
             </Link>
-            <Link href="#about" className="text-indigo-600 hover:text-purple-700 font-medium">
+            <Link href="#about" className="text-[#222C56] hover:text-purple-700 font-medium">
               About
             </Link>
-            <Link href="#contact" className="text-indigo-600 hover:text-purple-700 font-medium">
+            <Link href="#contact" className="text-[#222C56] hover:text-purple-700 font-medium">
               Contact
             </Link>
           </nav>
