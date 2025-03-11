@@ -108,7 +108,7 @@ const Courses = () => {
           <h2 className="text-3xl font-bold text-indigo-900 sm:text-4xl mb-4">
             Our Courses
           </h2>
-          <p className="text-lg text-indigo-700 max-w-2xl mx-auto">
+          <p className="text-lg text-[#1d3286] max-w-2xl mx-auto">
             Discover our comprehensive range of courses in Robotics and Artificial Intelligence, 
             designed to equip you with cutting-edge skills and knowledge.
           </p>

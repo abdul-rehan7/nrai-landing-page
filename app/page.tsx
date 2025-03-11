@@ -78,7 +78,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-indigo-900 sm:text-4xl mb-4">
                   Our Trusted Partners
                 </h2>
-                <p className="text-lg text-indigo-700 max-w-2xl mx-auto">
+                <p className="text-lg  text-[#1d3286] max-w-2xl mx-auto">
                   Collaborating with industry leaders to provide cutting-edge education and research opportunities
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-indigo-900 sm:text-4xl mb-4">
                   Why Choose NUST Robotics & AI?
                 </h2>
-                <p className="text-lg text-indigo-700 max-w-2xl mx-auto">
+                <p className="text-lg  text-[#1d3286] max-w-2xl mx-auto">
                   Experience world-class education with state-of-the-art facilities and expert instructors
                 </p>
               </div>
@@ -142,8 +142,8 @@ export default function Home() {
                     style={{ transitionDelay: `${index * 200}ms` }}
                   >
                     <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-bold mb-2 text-purple-800">{feature.title}</h3>
-                    <p className="text-indigo-600">{feature.description}</p>
+                    <h3 className="text-xl font-bold mb-2  text-[#1d3286]">{feature.title}</h3>
+                    <p className=" text-[#1d3286]">{feature.description}</p>
                   </div>
                 ))}
               </div>
