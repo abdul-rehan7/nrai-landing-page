@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-indigo-800 text-center text-indigo-200">
+        <div className="mt-8 pt-8 border-t border-indigo-500 text-center text-indigo-200">
           <p>&copy; {new Date().getFullYear()} NUST Robotics & AI. All rights reserved.</p>
         </div>
       </div>
