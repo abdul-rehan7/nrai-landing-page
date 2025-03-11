@@ -39,7 +39,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-700 to-indigo-800 text-white py-20">
+        <section className="bg-gradient-to-br from-[#303f79] to-[#101528] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div 
               ref={heroRef}
@@ -54,7 +54,7 @@ export default function Home() {
               </p>
               <a
                 href="#courses"
-                className="inline-block bg-white text-purple-700 px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-50 transition-colors"
+                className="inline-block bg-white text-[#101528] px-8 py-3 rounded-full font-semibold text-lg hover:bg-purple-50 transition-colors"
               >
                 Explore Our Courses
               </a>
