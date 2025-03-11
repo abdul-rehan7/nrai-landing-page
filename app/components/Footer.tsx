@@ -36,8 +36,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-purple-200">Contact Us</h3>
+          <div id='contact'>
+            <h3  className="text-xl font-bold mb-4 text-purple-200">Contact Us</h3>
             <ul className="space-y-2 text-indigo-200">
               <li>Email: robotics@nust.edu.pk</li>
               <li>Phone: +92 000 0000000</li>
