@@ -47,7 +47,7 @@ const courses: Course[] = [
   },
   {
     id: 5,
-    title: "Robot Operating System (ROS)",
+    title: "Adobe Illustrator",
     description: "Learn to develop robotic applications using ROS framework and tools.",
     duration: "10 weeks",
     level: "Intermediate",
