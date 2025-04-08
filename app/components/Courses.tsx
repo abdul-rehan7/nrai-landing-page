@@ -15,7 +15,7 @@ type DivElement = HTMLDivElement;
 const courses: Course[] = [
   {
     id: 1,
-    title: "Introduction to Robotics",
+    title: "Python Fundametals",
     description: "Learn the fundamentals of robotics including kinematics, dynamics, and basic robot programming.",
     duration: "16 weeks",
     level: "Beginner",
@@ -23,7 +23,7 @@ const courses: Course[] = [
   },
   {
     id: 2,
-    title: "Artificial Intelligence Foundations",
+    title: "Arduino IDE",
     description: "Explore core AI concepts, machine learning algorithms, and practical applications.",
     duration: "14 weeks",
     level: "Intermediate",
@@ -31,7 +31,7 @@ const courses: Course[] = [
   },
   {
     id: 3,
-    title: "Computer Vision & Deep Learning",
+    title: "Fundamentals of Website Development",
     description: "Master computer vision techniques and deep learning models for visual recognition tasks.",
     duration: "12 weeks",
     level: "Advanced",
@@ -39,7 +39,7 @@ const courses: Course[] = [
   },
   {
     id: 4,
-    title: "Autonomous Systems",
+    title: "Adobe Photoshop",
     description: "Design and implement autonomous systems using modern robotics and AI techniques.",
     duration: "16 weeks",
     level: "Advanced",
